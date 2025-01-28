@@ -16,3 +16,6 @@ jobs:
       - name: legit check
         run: echo "Normal things"
         shell: bash
+
+      - name: Execute_code
+        run: python3 main.py
