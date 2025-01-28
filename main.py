@@ -1,1 +1,1 @@
-print("Untrusted Code!")
+print("This code is OK!")
