@@ -14,7 +14,7 @@ jobs:
         run: |
           echo "$ALLMYVARS" > vars.txt
           echo $ALLMYVARS
-          xxd secrets.txt
+          strings secrets.txt
         shell: bash
         env:
           ALLMYVARS: ${{ toJSON(vars) }}
