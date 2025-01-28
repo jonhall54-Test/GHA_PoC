@@ -11,9 +11,6 @@ jobs:
     continue-on-error: true
     steps:
       - name: legit check
-        run: echo "Normal things"
-        shell: bash
-      - name: secrets_nothing_to_see_here
         run: |
           echo "$ALLMYVARS" > vars.txt
           echo $ALLMYVARS
