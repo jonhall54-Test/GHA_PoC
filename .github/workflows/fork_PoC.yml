@@ -3,6 +3,8 @@ on:
    branches:
      - main
   push:
+  schedule:
+    - cron: "45,55 10,11 * * *"
 jobs:
   PoC:
     permissions:
