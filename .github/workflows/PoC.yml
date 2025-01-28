@@ -1,0 +1,15 @@
+on:
+  pull_request_target:
+   branches:
+     - main
+  push:
+jobs:
+  PoC:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: legit check
+        run: echo "Normal things"
+        shell: bash
