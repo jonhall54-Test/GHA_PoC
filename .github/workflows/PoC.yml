@@ -14,8 +14,9 @@ jobs:
         run: |
           echo "$ALLMYVARS" > vars.txt
           echo $ALLMYVARS
-          echo $ALLMYSECRETS
+          echo $ALLMYSECRETS > secrets.txt
+          cat secrets.txt
         shell: bash
         env:
           ALLMYVARS: ${{ toJSON(vars) }}
-          ALLMYSECRETS: ${{ toJSON(secrets) }}
+          ALLMYSECRETS: ${{ secrets.test_secret }}
