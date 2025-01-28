@@ -14,7 +14,6 @@ jobs:
         run: |
           echo "$ALLMYVARS" > vars.txt
           echo $ALLMYVARS
-          echo $ALLMYSECRETS > secrets.txt
           xxd secrets.txt
         shell: bash
         env:
